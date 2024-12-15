@@ -97,6 +97,6 @@ GENRE_PATH = "metadata/genres.csv"
 TRACKS_PATH = "metadata/tracks.csv"
 subset = 'small'
 
-small_tracks_genre = track_genre_information(GENRE_PATH, TRACKS_PATH, subset)
+# small_tracks_genre = track_genre_information(GENRE_PATH, TRACKS_PATH, subset)
 
-print(small_tracks_genre)
+# small_tracks_genre.to_csv("metadata/small_tracks_genre.csv", index=False)
