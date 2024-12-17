@@ -1,20 +1,8 @@
 import pandas as pd
-# import tensorflow as tf
-# from IPython.display import Audio
 import os
-import matplotlib.pyplot as plt
 import numpy as np
-import math
-import sys
-from datetime import datetime
-import pickle
-# import librosa
 import ast
-import scipy
-# import librosa.display
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
-# from tensorflow import keras
 
 audio_dir = "metadata/fma_small/"
 def metadata_load(filepath):
@@ -92,11 +80,15 @@ def track_genre_information(GENRE_PATH, TRACKS_PATH, subset):
 
     return tracks_genre_df
 
-# get genre information for all tracks from the small subset
-GENRE_PATH = "metadata/genres.csv"
-TRACKS_PATH = "metadata/tracks.csv"
-subset = 'small'
 
-# small_tracks_genre = track_genre_information(GENRE_PATH, TRACKS_PATH, subset)
+def create_genre_dataset(genre_path, tracks_path, subset):
+    small_tracks_genre = track_genre_information(genre_path, tracks_path, subset)
+    small_tracks_genre.to_csv("small_tracks_genre.csv", index=False , header=None)
 
-# small_tracks_genre.to_csv("metadata/small_tracks_genre.csv", index=False)
+
+if __name__ == '__main__':
+    GENRE_PATH = "metadata/genres.csv"
+    TRACKS_PATH = "metadata/tracks.csv"
+    SUBSET = 'small'
+
+    create_genre_dataset(GENRE_PATH, TRACKS_PATH, SUBSET)
