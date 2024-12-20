@@ -5,3 +5,4 @@ matplotlib
 pydub
 librosa
 tensorflow
+python-dotenv

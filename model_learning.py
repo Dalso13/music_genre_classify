@@ -16,7 +16,6 @@ y = dataset.iloc[:, -1].astype(np.int64)
 
 label = len(np.unique(y))
 label_str = ["Electronic", "Experimental", "Folk", "Hip-Hop", "Instrumental", "International", "Pop", "Rock"]
-
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 cnn = Sequential([
