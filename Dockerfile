@@ -5,6 +5,7 @@ WORKDIR /root
 
 RUN apt update
 RUN apt install git -y
+RUN apt install ffmpeg -y
 RUN mkdir project
 
 WORKDIR /root/project

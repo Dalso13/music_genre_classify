@@ -1,7 +1,6 @@
 import numpy as np
 import librosa.effects
 import librosa.feature
-import librosa.display
 import glob
 
 # 최소 사이즈
