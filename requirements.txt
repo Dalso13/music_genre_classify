@@ -1,7 +1,6 @@
 scikit-learn
 numpy
 pandas
-matplotlib
 pydub
 librosa
 tensorflow
